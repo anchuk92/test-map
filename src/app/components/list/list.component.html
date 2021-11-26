@@ -1,8 +1,8 @@
 <div class="container" *ngIf="places$ | async as places">
   <h1>Объекты</h1>
-  <input type="text" placeholder="Поиск" [(ngModel)]="searchName">
+
     <div>
-      <ul *ngFor="let place of places | search:searchName"
+      <ul *ngFor="let place of places"
           (click)="clickName(place)"
           [ngClass]="{select: click}">
         <li>{{place.name}}</li>

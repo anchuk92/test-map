@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
-import { Place } from '../shared/interfaces';
-import {PlaceService} from "../shared/place.service";
+import { Place } from '../../shared/interfaces/interfaces';
+import {PlaceService} from "../../shared/services/place.service";
 
 @Component({
   selector: 'app-list',
@@ -21,8 +21,7 @@ export class ListComponent implements OnInit {
 
   }
   clickName(place: Place) {
-    this.click = true
-    this.placeService.setPlace(place)
+
   }
 
 }

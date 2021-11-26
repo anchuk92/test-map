@@ -25,7 +25,7 @@ input {
 
 ul {
   list-style: none;
-  background-image: url('src/assets/images/auto.png');
+  background-image: url('../../../assets/images/auto.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

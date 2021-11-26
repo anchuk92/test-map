@@ -7,9 +7,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import { SearchPipe } from './shared/search.pipe';
 import {FormsModule} from "@angular/forms";
-import { MapComponent } from './map/map.component';
-import {InMemoryDataService} from "./shared/in-memory-data.service";
-import { ListComponent } from './list/list.component';
+import { MapComponent } from './components/map/map.component';
+import {InMemoryDataService} from "./shared/services/in-memory-data.service";
+import { ListComponent } from './components/list/list.component';
+import { NameFilterComponent } from './components/filters/name-filter/name-filter.component';
+import { FullMapComponent } from './components/full-map/full-map.component';
+import { ObjectsCardComponent } from './components/objects-card/objects-card.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { ListComponent } from './list/list.component';
     AppComponent,
     SearchPipe,
     MapComponent,
-    ListComponent
+    ListComponent,
+    NameFilterComponent,
+    FullMapComponent,
+    ObjectsCardComponent
   ],
   imports: [
     BrowserModule,

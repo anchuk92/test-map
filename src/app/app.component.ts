@@ -1,7 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import { Place } from './shared/interfaces';
-
-declare var google: any;
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
