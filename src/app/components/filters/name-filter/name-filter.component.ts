@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-name-filter',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameFilterComponent implements OnInit {
 
-  searchName = ''
+  @Output() onChanged: EventEmitter<string> = new EventEmitter<string>();
+
+  searchText: FormControl = new FormControl('');
 
   constructor() { }
 
   ngOnInit(): void {
+    this.searchText.valueChanges.subscribe( text => {
+      this.onChanged.emit(text);
+    })
   }
 
 }

@@ -1,37 +1,28 @@
-.container {
-  position: absolute;
-  left: 1138px;
-  width: 267px;
-  height: 861px;
-  background: #FFFFFF;
-  border-radius: 9px;
-}
-h1 {
-  width: 101px;
-  height: 28px;
-  margin-left: 16px;
-  margin-top: 11px;
-  font-size: 24px;
-  line-height: 28px;
-}
-input {
-  width: 267px;
-  height: 33px;
-  background: #F2F2F2;
-  font-size: 13px;
-  line-height: 15px;
-  border: none;
-}
-
 ul {
   list-style: none;
-  background-image: url('../../../assets/images/auto.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  /*background-image: url('../../../assets/images/auto.png');*/
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: left center;*/
+  width: 267px;
+  height: 26px;
+  border-bottom: 1px solid #EDEDED;
+  margin: 0;
+  padding: 0;
+}
+li {
+  font-size: 11px;
+  line-height: 13px;
+  padding-top: 6px;
+  padding-left: 16px;
+}
+.change-color {
+  background: rgba(255, 245, 0, 0.4);
+}
+li img {
   width: 13px;
   height: 11px;
+  padding-right: 5px;
 }
-.select {
-  color: darkred;
-}
+
+

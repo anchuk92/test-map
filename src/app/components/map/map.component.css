@@ -1,6 +1,6 @@
 agm-map {
   overflow: hidden;
-  width: 1138px;
-  height: 861px;
+  width: 100vw;
+  height: 100vh;
 }
 

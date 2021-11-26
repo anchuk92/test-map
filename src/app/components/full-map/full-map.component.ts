@@ -12,7 +12,7 @@ export class FullMapComponent implements OnInit {
 
   ngOnInit(): void {
     this.placeService.getAll().subscribe(places => {
-      this.placeService.places$.next(places)
+      this.placeService.places$.next(places);
       this.placeService.responsePlaces = places;
     })
   }

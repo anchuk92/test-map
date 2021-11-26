@@ -1,2 +1,5 @@
-<app-name-filter></app-name-filter>
-<app-list></app-list>
+<div class="container">
+  <h1>Объекты</h1>
+  <app-name-filter (onChanged)="onChanged($event)"></app-name-filter>
+  <app-list></app-list>
+</div>

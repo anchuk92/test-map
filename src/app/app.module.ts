@@ -5,8 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
-import { SearchPipe } from './shared/search.pipe';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MapComponent } from './components/map/map.component';
 import {InMemoryDataService} from "./shared/services/in-memory-data.service";
 import { ListComponent } from './components/list/list.component';
@@ -18,7 +17,6 @@ import { ObjectsCardComponent } from './components/objects-card/objects-card.com
 @NgModule({
   declarations: [
     AppComponent,
-    SearchPipe,
     MapComponent,
     ListComponent,
     NameFilterComponent,
@@ -28,11 +26,12 @@ import { ObjectsCardComponent } from './components/objects-card/objects-card.com
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDTl9f2AxWIv5VCdDuj2ZUMit9cZDtSxdg'
     }),
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [],
   bootstrap: [AppComponent]

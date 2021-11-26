@@ -1,0 +1,18 @@
+.container {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  bottom: 19px;
+  width: 267px;
+  background: #FFFFFF;
+  border-radius: 9px;
+}
+h1 {
+  width: 101px;
+  height: 28px;
+  margin-left: 16px;
+  margin-top: 11px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+}

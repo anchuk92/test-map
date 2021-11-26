@@ -1,0 +1,13 @@
+input {
+  width: 267px;
+  height: 33px;
+  background: #F2F2F2;
+  font-size: 13px;
+  line-height: 15px;
+  border: none;
+  padding: 0;
+}
+input::placeholder {
+  padding-left: 16px;
+  color: #000000;
+}

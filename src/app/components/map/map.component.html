@@ -1,10 +1,11 @@
 <div>
-  <agm-map [latitude]="50.760918" [longitude]="4.110170">
+  <agm-map [latitude]="defaultLatitude" [longitude]="defaultLongitude" [disableDefaultUI]='true'>
     <agm-marker *ngFor="let place of places"
                 [latitude]="place.latitude"
                 [longitude]="place.longitude"
                 [iconUrl]="icon"
-                (markerClick)="clickMarker(place)"
+                [markerClickable]="true"
+                (markerClick)="onPlaceClick(place.id)"
     ></agm-marker>
   </agm-map>
 

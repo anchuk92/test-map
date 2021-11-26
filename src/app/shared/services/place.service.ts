@@ -10,24 +10,12 @@ export class PlaceService{
 
   constructor( private http: HttpClient) { }
 
-  private placesUrl = 'api/places/'
-  responsePlaces!: Place[]
-  places$: Subject<Place[]> = new Subject<Place[]>()
+  private placesUrl = 'api/places/';
+  responsePlaces!: Place[];
+  places$: Subject<Place[]> = new Subject<Place[]>();
 
   getAll(): Observable<Place[]>{
-    return this.http.get<Place[]>(this.placesUrl)
+    return this.http.get<Place[]>(this.placesUrl);
   }
-
-  filterPlaceName (text: string) {
-      this.places$.subscribe(places => {
-        if (!text.trim()){
-          return places
-        }
-        return places.filter( place => {
-          return place.name.toLowerCase().includes(text.toLowerCase())
-        });
-      })
-  }
-
 
 }

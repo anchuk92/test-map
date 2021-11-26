@@ -9,8 +9,9 @@ import {Place} from "../../shared/interfaces/interfaces";
 })
 export class MapComponent implements OnInit{
 
-  isClicked = false
-  places!: Place[]
+  places!: Place[];
+  defaultLatitude = 50.760918;
+  defaultLongitude = 4.110170;
 
   icon = {
     url: './assets/images/icon.png',
@@ -18,18 +19,27 @@ export class MapComponent implements OnInit{
       height: 40,
       width: 40
     }
-  } as any
+  } as any;
 
   constructor(private placeService: PlaceService) { }
 
   ngOnInit(): void {
-    this.placeService.places$.subscribe(places => this.places = places)
+    this.placeService.places$.subscribe(places => {
+      this.places = places;
+    })
   }
 
 
-  clickMarker(place:Place) {
-    this.isClicked = true
-
+  onPlaceClick(id: number) {
+    this.places = this.places.map(place => {
+      if (place.id === id) {
+        place.isSelected = true;
+      } else {
+        place.isSelected = false;
+      }
+      return place;
+    })
+    this.placeService.places$.next(this.places);
   }
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
 import { Place } from '../../shared/interfaces/interfaces';
 import {PlaceService} from "../../shared/services/place.service";
 
@@ -10,18 +9,24 @@ import {PlaceService} from "../../shared/services/place.service";
 })
 export class ListComponent implements OnInit {
 
-  places$: Observable<Place[]> = new Observable<Place[]>()
-  searchName = ''
-  click = false
+  places!: Place[];
 
   constructor(private placeService: PlaceService) { }
 
   ngOnInit(): void {
-    this.places$ = this.placeService.getAll()
-
+    this.placeService.places$.subscribe(places => this.places = places);
   }
-  clickName(place: Place) {
-
+  onPlaceClick(id: number) {
+    this.places = this.places.map(place => {
+      if (place.id === id) {
+        place.isSelected = true;
+      } else {
+        place.isSelected = false;
+      }
+      return place;
+    })
+    this.placeService.places$.next(this.places);
   }
+
 
 }
