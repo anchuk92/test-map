@@ -28,7 +28,7 @@ import { ObjectsCardComponent } from './components/objects-card/objects-card.com
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDTl9f2AxWIv5VCdDuj2ZUMit9cZDtSxdg'
+      apiKey: 'AIzaSyChSyE1XGekFIjmATpTIaAGhpO-RDHAXJw'
     }),
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),

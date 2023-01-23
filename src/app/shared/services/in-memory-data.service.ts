@@ -1,6 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
-import {Place} from "../interfaces/interfaces";
+import { Place } from "../interfaces/interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +13,13 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 1,
           latitude: 50.760918,
           longitude: 4.110170,
-          name: 'ВАЗ'
+          name: 'Skoda'
         },
         {
           id: 2,
           latitude: 47.492647,
           longitude: 19.051399,
-          name: 'ГАЗель'
+          name: 'Mercedes'
         },
         {
           id: 3,

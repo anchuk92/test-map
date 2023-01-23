@@ -1,13 +1,14 @@
 input {
-  width: 267px;
+  width: 240px;
   height: 33px;
+  padding-left: 6px;
+  margin-left: 10px;
   background: #F2F2F2;
   font-size: 13px;
   line-height: 15px;
   border: none;
-  padding: 0;
 }
 input::placeholder {
-  padding-left: 16px;
+
   color: #000000;
 }
